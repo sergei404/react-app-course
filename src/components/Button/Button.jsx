@@ -1,12 +1,9 @@
 import classes from "./Button.module.css";
 
-const isPrimary = true;
-
-export const Button = (props) => {
+export const Button = ({onClick, isActive, isDisabled, children}) => {
   return (
-    <button onClick={props.onClick} className={`${classes.btn} ${isPrimary ? classes.primary : ""}`}>
-      {props.children}
+    <button onClick={onClick} className={`${classes.btn} ${isActive ? classes.active : ""}`} disabled={isDisabled}>
+      {children}
     </button>
-    // <button className={isPrimary ? classes.primary : classes.btn}>кнопка</button>
   );
 };
