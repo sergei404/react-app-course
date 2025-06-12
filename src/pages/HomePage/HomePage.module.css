@@ -6,5 +6,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: -10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .controlsContainer {
+    flex-wrap: nowrap;
+  }
+}
+
+.noCards {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.select {
+  height: 40px;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
 }

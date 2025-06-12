@@ -1,14 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../Button";
 import cls from "./QuestionCard.module.css";
+import { Badge } from "../Badge";
 
 export const QuestionCard = ({ card }) => {
   const navigate = useNavigate();
+
+  const levelVariant = card.level === 1 ? "primary" : card.level === 2 ? "warning" : "alert";
+  const completedVariant = card.completed ? "success" : "primary";
+
   return (
     <div className={cls.card}>
       <div className={cls.cardLabels}>
-        <div>Level: {card.level}</div>
-        <div>{card.complited ? "Complited" : "Not Complited"}</div>
+        <Badge variant={levelVariant}>Level: {card.level}</Badge>
+        {/* <div>Level: {card.level}</div> */}
+        <Badge variant={completedVariant}>{card.completed ? "Complited" : "Not Complited"}</Badge>
+        {/* <div>{card.complited ? "Complited" : "Not Complited"}</div> */}
       </div>
       <h5 className={cls.cardTitle}>{card.question}</h5>
       <div className={cls.cardAnswers}>
