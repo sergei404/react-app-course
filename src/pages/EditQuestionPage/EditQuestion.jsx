@@ -65,7 +65,7 @@ export const EditQuestion = ({ initialState = {} }) => {
   return (
     <>
       {(isPending || isQuestionRemoved) && <Loader />}
-      <h1 className={cls.formTitle}>Add new question</h1>
+      <h1 className={cls.formTitle}>Edit question</h1>
       <div className={cls.formContainer}>
         <button className={cls.deleteCardBtn} disabled={isPending || isQuestionRemoved} onClick={onRemoveQuestionHandler}>
           ✖
