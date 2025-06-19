@@ -12,7 +12,7 @@
     box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.1);
 }
 
-.form {
+/* .form {
     width: 100%;
     padding: 20px 10px;
     display: flex;
@@ -66,4 +66,4 @@
 
 .checkbox:disabled + label {
     opacity: 0.5;
-}
+} */

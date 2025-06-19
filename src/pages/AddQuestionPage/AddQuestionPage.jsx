@@ -1,10 +1,10 @@
 import { useActionState } from "react";
-import { Button } from "../../components/Button";
 import cls from "./AddQuestionPage.module.css";
 import { delayFn } from "../../helpers/delayFn";
 import { toast } from "react-toastify";
 import { API_URL } from "../../constants";
 import { Loader } from "../../components/Loader";
+import { QuestionForm } from "../../components/QuestionForm";
 
 const createCardAction = async (_prevState, formData) => {
   try {
@@ -22,7 +22,7 @@ const createCardAction = async (_prevState, formData) => {
         resources: resources.length ? resources.split(",") : [],
         level: Number(formData.get("level")),
         completed: false,
-        editData: undefined,
+        editDate: undefined,
       }),
     });
 
@@ -47,7 +47,8 @@ const AddQuestionPage = () => {
       {isPending && <Loader />}
       <h1 className={cls.formTitle}>Add new question</h1>
       <div className={cls.formContainer}>
-        <form action={formAction} className={cls.form}>
+        <QuestionForm formState={formState} formAction={formAction} isPending={isPending} submitBtnText="Add Question" />
+        {/* <form action={formAction} className={cls.form}>
           <div className={cls.formControl}>
             <label htmlFor="questionField">Question: </label>
             <textarea
@@ -110,7 +111,7 @@ const AddQuestionPage = () => {
             <label htmlFor="clearField">Clear form after submitting</label>
           </div>
           <Button isDisabled={isPending}>Add question</Button>
-        </form>
+        </form> */}
       </div>
     </>
   );

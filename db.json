@@ -11,21 +11,20 @@
       ],
       "level": 1,
       "completed": true,
-      "editDate": "03.02.2025, 19:49",
-      "complited": true
+      "editDate": "03.02.2025, 19:49"
     },
     {
       "id": "2",
       "question": "Что такое JSX?",
-      "answer": "JSX — это синтаксическое расширение JavaScript для React.",
+      "answer": "JSX — это синтаксическое расширение JavaScript для React (javascript и xml 😎😎😎😎😎).",
       "description": "JSX позволяет писать HTML-подобный код в JavaScript, который затем транспилируется в вызовы `React.createElement`. Он облегчает создание и визуальное представление структуры компонентов.",
       "resources": [
         "https://react.dev/learn/writing-markup-with-jsx"
       ],
-      "level": 2,
-      "completed": false,
-      "editDate": "03.02.2025, 20:25",
-      "complited": true
+      "level": "2",
+      "completed": null,
+      "editDate": "19.06.2025, 16:49",
+      "editData": "19.06.2025, 16:47"
     },
     {
       "id": "3",
@@ -71,8 +70,7 @@
         "https://react.dev/learn/state-a-components-memory"
       ],
       "level": 2,
-      "completed": true,
-      "complited": false
+      "completed": true
     },
     {
       "id": "7",
