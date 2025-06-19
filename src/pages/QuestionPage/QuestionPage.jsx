@@ -35,8 +35,8 @@ export const QuestionPage = () => {
     fetchCard();
   }, []);
 
-   useEffect(() => {
-    card !== null && setIsChecked(card.completed)
+  useEffect(() => {
+    card !== null && setIsChecked(card.completed);
   }, [card]);
 
   const checkboxChangeHandler = () => {

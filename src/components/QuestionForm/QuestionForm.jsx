@@ -2,6 +2,7 @@ import { Button } from "../Button";
 import cls from "./QuestionForm.module.css";
 
 export const QuestionForm = ({formAction, formState, isPending, submitBtnText}) => {
+    console.log(formState.clearForm);
   return (
     <form action={formAction} className={cls.form}>
       <input type="hidden" name="questionId" defaultValue={formState.id}/>
